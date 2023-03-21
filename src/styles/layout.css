@@ -1,0 +1,140 @@
+:root {
+  --theme-color: rgb(123, 104, 238);
+  --highlights: rgb( 72, 61, 139 );
+}
+
+body {
+  background-color: var(--theme-color);
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+}
+
+.header-overlay {
+  background-image: url("../assets/BG.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  flex: auto;
+  box-shadow: 1px 1px 20px 1px black;
+  position: relative;
+}
+
+.scroll-svg {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.header-links-container {
+  position: absolute;
+  right: 20px;
+  bottom: 125px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.header-links {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: white;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.header-links:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.title {
+  transform: translateX(50px);
+  opacity: 0;
+  padding-left: 100px;
+  padding-top: 100px;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  color: white;
+}
+
+.slidein {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: opacity 0.5s ease-in, transform 0.25s ease-in-out;
+}
+
+.about,
+.projects {
+  scale: 90%;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: scale 1s ease;
+  background-color: rgb(250, 237, 221);
+  box-shadow: 1px 1px 20px 1px black;
+}
+
+.scale {
+  scale: 100%;
+}
+
+footer {
+  padding: 3rem;
+  background-color: var(--highlights);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 20px 1px black;
+  gap: 1rem;
+  color: white;
+}
+
+.contact-links-container {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.link-container {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 10px 1px black;
+}
+
+.link-container > a > img {
+  width: 75%;
+}
+
+.link-container > a {
+  text-decoration: none;
+}
+
+.link-container > a > i {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .title {
+    padding-left: 18px;
+    font-size: 1.25rem;
+  }
+  
+}
