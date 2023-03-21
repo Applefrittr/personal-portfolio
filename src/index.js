@@ -7,7 +7,9 @@ const aboutHead = document.querySelector("#about-head");
 const projects = document.querySelector(".projects");
 const projectsHead = document.querySelector("#projects-head");
 const aboutLnk = document.querySelector("#about-link");
+const contact = document.querySelector("footer")
 const projectsLnk = document.querySelector("#projects-link")
+const contactLnk = document.querySelector("#contact-link")
 
 // aboutBtn.addEventListener("click", () => {
 //   body.classList.toggle("nightmode");
@@ -53,4 +55,7 @@ aboutLnk.addEventListener("click", () => {
 });
 projectsLnk.addEventListener("click", () => {
   window.scrollTo({ top: projects.offsetTop - 24, left: 0, behavior: "smooth" });
+});
+contactLnk.addEventListener("click", () => {
+  window.scrollTo({ top: contact.offsetTop - 24, left: 0, behavior: "smooth" });
 });
