@@ -15,6 +15,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   font-family: Roboto;
+  /* overflow: hidden; */
 }
 
 header {
@@ -89,6 +90,7 @@ header {
   transition: scale 1s ease;
   background-color: rgb(250, 237, 221);
   box-shadow: 1px 1px 20px 1px black;
+  overflow: hidden;
 }
 
 .scale {
