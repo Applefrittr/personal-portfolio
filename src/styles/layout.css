@@ -3,12 +3,18 @@
   --highlights: rgb( 72, 61, 139 );
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url("../assets/Roboto-Black.ttf");
+}
+
 body {
   background-color: var(--theme-color);
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  font-family: Roboto;
 }
 
 header {
