@@ -119,6 +119,10 @@ footer {
   box-shadow: 1px 1px 10px 1px black;
 }
 
+.link-container:hover {
+  background-color: var(--theme-color);
+}
+
 .link-container > a > img {
   width: 75%;
 }

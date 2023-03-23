@@ -10,6 +10,10 @@ const aboutLnk = document.querySelector("#about-link");
 const contact = document.querySelector("footer")
 const projectsLnk = document.querySelector("#projects-link")
 const contactLnk = document.querySelector("#contact-link")
+const gif1 = document.querySelector("#gif1")
+const gif2 = document.querySelector("#gif2")
+const gif3 = document.querySelector("#gif3")
+
 
 // aboutBtn.addEventListener("click", () => {
 //   body.classList.toggle("nightmode");
@@ -26,24 +30,32 @@ const scrollEvents = () => {
   let aboutHT = about.offsetTop,
     projectsHT = projects.offsetTop,
     viewHT = window.innerHeight;
-  console.log(aboutHT, projectsHT, scrollY + viewHT);
+  //console.log(aboutHT, projectsHT, scrollY + viewHT);
   if (window.scrollY < 300) {
     title.style.paddingTop = `${100 + window.scrollY * 0.9}px`;
     about.classList.remove("scale");
     aboutHead.classList.remove("header-slide");
   } else if (
     window.scrollY + viewHT > aboutHT &&
-    window.scrollY + viewHT < projectsHT + 300
+    window.scrollY + viewHT < projectsHT + gif1.offsetTop + 100
   ) {
     aboutHead.classList.add("header-slide");
     about.classList.add("scale");
     projects.classList.remove("scale");
     projectsHead.classList.remove("header-slide");
-  } else if (window.scrollY + viewHT > projectsHT + 300) {
+    gif1.classList.remove("gif-slidein")
+  } else if (window.scrollY + viewHT > projectsHT + gif1.offsetTop + 100 && window.scrollY + viewHT < projectsHT + gif2.offsetTop + 100) {
     about.classList.remove("scale");
     aboutHead.classList.remove("header-slide");
     projects.classList.add("scale");
     projectsHead.classList.add("header-slide");
+    gif1.classList.add("gif-slidein")
+    gif2.classList.remove("gif-slidein")
+  } else if (window.scrollY + viewHT > projectsHT + gif2.offsetTop + 100 && window.scrollY + viewHT < projectsHT + gif3.offsetTop + 100) {
+    gif2.classList.add("gif-slidein")
+    gif3.classList.remove("gif-slidein")
+  } else if (window.scrollY + viewHT > projectsHT + gif3.offsetTop + 100) {
+    gif3.classList.add("gif-slidein")
   } else return;
 };
 
