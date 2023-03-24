@@ -13,17 +13,73 @@ const contactLnk = document.querySelector("#contact-link")
 const gif1 = document.querySelector("#gif1")
 const gif2 = document.querySelector("#gif2")
 const gif3 = document.querySelector("#gif3")
-
-
-// aboutBtn.addEventListener("click", () => {
-//   body.classList.toggle("nightmode");
-// });
-
+const cursor = document.querySelector(".cursor")
 const title = document.querySelector(".title");
+const titleUser = document.querySelector("h1")
+const titleDescrpt = document.querySelector(".title-descrpt")
+const descrptP = document.querySelector(".title-descrpt-p")
+const login = document.querySelector(".login")
+const headerLinks = document.querySelector(".header-links-container")
+const svg = document.querySelector(".scroll-svg")
 
-setTimeout(() => {
-  title.classList.add("slidein");
-}, 1000);
+
+
+
+
+
+
+const titleAnimations = () => {
+  setTimeout(() => {
+    title.classList.add("slidein");
+  }, 1000);
+  setInterval(() => {
+    cursor.classList.toggle("cursor-blink")
+  }, 500)
+
+  setTimeout(() => {
+    typeWrite("APPLEFRITTR", titleUser, 100)
+  }, 3000)
+  
+  setTimeout(() => {
+    titleDescrpt.appendChild(cursor)
+    typeWrite("Designing Web Apps with style", descrptP, 75)
+  }, 6000)
+  
+  setTimeout(() => {
+    login.style.opacity = "1"
+    setTimeout(() => {
+      typeWrite(".....", login, 500)
+    }, 1000)
+    setTimeout(() => {
+      const init = document.createElement("span")
+      init.textContent = " INITIALIZE"
+      login.appendChild(init)
+    }, 3750)
+  }, 10000)
+
+  setTimeout(() => {
+    let count = 0
+    const print = setInterval(() => {
+      if (count === 20) clearInterval(print)
+      let ele = document.createElement('p')
+      ele.textContent = "//"
+      title.appendChild(ele)
+      count++
+    }, 25)
+    setTimeout(() => {
+      headerLinks.style.opacity = "1"
+    }, 1000)
+    setTimeout(() => {
+      svg.style.opacity = "1"
+    }, 2000)
+  }, 14000)
+
+
+}
+
+
+
+
 
 const scrollEvents = () => {
   //console.log(window.scrollY)
@@ -59,6 +115,19 @@ const scrollEvents = () => {
   } else return;
 };
 
+const typeWrite = (string, target, wait) => {
+  const arr = string.split('')
+  let interval = 250
+  arr.forEach((char) => {
+    setTimeout(() => {
+      let ele = document.createElement("span")
+      ele.textContent = char
+      target.appendChild(ele)
+    }, interval )
+    interval += wait
+  })
+}
+
 // event listeners
 document.addEventListener("scroll", scrollEvents);
 
@@ -71,3 +140,8 @@ projectsLnk.addEventListener("click", () => {
 contactLnk.addEventListener("click", () => {
   window.scrollTo({ top: contact.offsetTop - 24, left: 0, behavior: "smooth" });
 });
+
+
+//Page open
+
+titleAnimations()

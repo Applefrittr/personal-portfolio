@@ -1,11 +1,18 @@
 :root {
-  --theme-color: rgb(123, 104, 238);
-  --highlights: rgb( 72, 61, 139 );
+  /* --theme-color: rgb(123, 104, 238);
+  --highlights: rgb( 72, 61, 139 ); */
+  --theme-color: rgb(0, 0, 0);
+  --highlights: rgb(142, 142, 142);
 }
 
 @font-face {
   font-family: Roboto;
   src: url("../assets/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: Glitch;
+  src: url("../assets/Glitch.ttf");
 }
 
 body {
@@ -24,7 +31,7 @@ header {
 }
 
 .header-overlay {
-  background-image: url("../assets/BG.jpg");
+  background-image: url("../assets/city.gif");
   background-position: center;
   background-size: cover;
   background-repeat: none;
@@ -46,6 +53,8 @@ header {
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .header-links {
@@ -56,11 +65,16 @@ header {
   color: white;
   text-align: left;
   text-decoration: underline;
+  font-family: Roboto;
 }
 
 .header-links:hover {
   text-decoration: none;
   cursor: pointer;
+}
+.scroll-svg {
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .title {
@@ -72,6 +86,40 @@ header {
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
   color: white;
+  overflow: hidden;
+}
+
+.title-user {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  font-size: 10rem;
+}
+
+.title-user > h1 {
+  font-family: Glitch;
+  font-size: inherit;
+}
+
+.title-descrpt {
+  display: flex;
+  align-items: center;
+}
+
+.cursor {
+  padding: .15em;
+  background-color: white;
+  font-size: .65em;
+}
+
+.cursor-blink {
+  opacity: 0;
+}
+
+.login {
+  opacity: 0;
+  transition: opacity 1s ease;
+  padding-top: 2rem;
 }
 
 .slidein {
@@ -128,7 +176,7 @@ footer {
 }
 
 .link-container:hover {
-  background-color: var(--theme-color);
+  background-color: var(--highlights);
 }
 
 .link-container > a > img {
@@ -147,6 +195,10 @@ footer {
   .title {
     padding-left: 18px;
     font-size: 1.25rem;
+  }
+
+  .title-user {
+    font-size: 5rem;
   }
   
 }
