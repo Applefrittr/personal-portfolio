@@ -22,12 +22,6 @@ const login = document.querySelector(".login")
 const headerLinks = document.querySelector(".header-links-container")
 const svg = document.querySelector(".scroll-svg")
 
-
-
-
-
-
-
 const titleAnimations = () => {
   setTimeout(() => {
     title.classList.add("slidein");
@@ -58,28 +52,22 @@ const titleAnimations = () => {
   }, 10000)
 
   setTimeout(() => {
-    let count = 0
-    const print = setInterval(() => {
-      if (count === 20) clearInterval(print)
-      let ele = document.createElement('p')
-      ele.textContent = "//"
-      title.appendChild(ele)
-      count++
-    }, 25)
-    setTimeout(() => {
-      headerLinks.style.opacity = "1"
-    }, 1000)
+    // let count = 0
+    // const print = setInterval(() => {
+    //   if (count === 20) clearInterval(print)
+    //   let ele = document.createElement('p')
+    //   ele.textContent = "//"
+    //   title.appendChild(ele)
+    //   count++
+    // }, 25)
+    headerLinks.style.opacity = "1"
     setTimeout(() => {
       svg.style.opacity = "1"
-    }, 2000)
+    }, 1000)
   }, 14000)
 
 
 }
-
-
-
-
 
 const scrollEvents = () => {
   //console.log(window.scrollY)
@@ -101,13 +89,15 @@ const scrollEvents = () => {
     projectsHead.classList.remove("header-slide");
     gif1.classList.remove("gif-slidein")
   } else if (window.scrollY + viewHT > projectsHT + gif1.offsetTop + 100 && window.scrollY + viewHT < projectsHT + gif2.offsetTop + 100) {
-    about.classList.remove("scale");
-    aboutHead.classList.remove("header-slide");
+    aboutHead.classList.add("header-slide");
+    about.classList.add("scale");
     projects.classList.add("scale");
     projectsHead.classList.add("header-slide");
     gif1.classList.add("gif-slidein")
     gif2.classList.remove("gif-slidein")
   } else if (window.scrollY + viewHT > projectsHT + gif2.offsetTop + 100 && window.scrollY + viewHT < projectsHT + gif3.offsetTop + 100) {
+    about.classList.remove("scale");
+    aboutHead.classList.remove("header-slide");
     gif2.classList.add("gif-slidein")
     gif3.classList.remove("gif-slidein")
   } else if (window.scrollY + viewHT > projectsHT + gif3.offsetTop + 100) {

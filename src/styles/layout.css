@@ -1,28 +1,12 @@
-:root {
-  /* --theme-color: rgb(123, 104, 238);
-  --highlights: rgb( 72, 61, 139 ); */
-  --theme-color: rgb(0, 0, 0);
-  --highlights: rgb(142, 142, 142);
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url("../assets/Roboto-Black.ttf");
-}
-
-@font-face {
-  font-family: Glitch;
-  src: url("../assets/Glitch.ttf");
-}
-
 body {
-  background-color: var(--theme-color);
+  background-color: black;
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   font-family: Roboto;
   /* overflow: hidden; */
+  color: var(--lettering);
 }
 
 header {
@@ -49,7 +33,7 @@ header {
 .header-links-container {
   position: absolute;
   right: 20px;
-  bottom: 125px;
+  bottom: 150px;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -62,10 +46,30 @@ header {
   border: none;
   outline: none;
   font-size: 2rem;
-  color: white;
   text-align: left;
-  text-decoration: underline;
-  font-family: Roboto;
+  font-family: Tomorrow;
+  font-weight: bold;
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  background-color: var(--outlines);
+  padding: 1rem;
+  position: relative;
+  width: 230px;
+  height: 60px; 
+  border: 0;
+}
+
+.header-links > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: var(--theme-color);
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }
 
 .header-links:hover {
@@ -136,25 +140,27 @@ header {
   flex-direction: column;
   align-items: center;
   transition: scale 1s ease;
-  background-color: rgb(250, 237, 221);
-  box-shadow: 1px 1px 20px 1px black;
+  /* background-color: rgb(46, 0, 11); */
+  /* box-shadow: 1px 1px 20px 1px black; */
   overflow: hidden;
+  gap: 1rem; 
 }
 
 .scale {
-  scale: 100%;
+  scale: 98%;
 }
 
 footer {
   padding: 3rem;
-  background-color: var(--highlights);
+  background-color: #fcee09;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 1px 1px 20px 1px black;
+  /* box-shadow: 1px 1px 20px 1px black; */
   gap: 1rem;
-  color: white;
+  color: black;
+  border-top: 2px solid var(--theme-color);
 }
 
 .contact-links-container {

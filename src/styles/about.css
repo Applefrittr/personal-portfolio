@@ -1,20 +1,21 @@
   .section-heading {
     z-index: 1;
     width: 100%;
-    background-color: white;
+    background-color: black;
+    border: 3px solid var(--outlines);
   }
   
   .header-slide {
     background-position: -99.5% 0;
-    color: black !important;
+    color: white !important;
   }
   
   .section-heading .header {
-    color: white;
+    color: var(--theme-color);
     padding: .75rem 5rem;
-    background-image: linear-gradient(to left, white 50%, var(--highlights) 50%);
-    background-size: 200.5% 100%;
+    background-color: var(--theme-color);
     transition: all 1s;
+    font-family: Tomorrow;
   }
   
   .section-content {
@@ -23,7 +24,9 @@
     flex-wrap: wrap;
     padding: 3rem;
     gap: 2rem;
-    width: 75%;
+    width: 100%;
+    border: solid 3px var(--lettering);
+    background-color: var(--bg-color);
   }
   
   .about-profile,
