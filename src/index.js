@@ -76,7 +76,7 @@ const scrollEvents = () => {
     viewHT = window.innerHeight;
   //console.log(aboutHT, projectsHT, scrollY + viewHT);
   if (window.scrollY < 300) {
-    title.style.paddingTop = `${100 + window.scrollY * 0.9}px`;
+    title.style.paddingTop = `${100 + window.scrollY * 0.5}px`;
     about.classList.remove("scale");
     aboutHead.classList.remove("header-slide");
   } else if (
