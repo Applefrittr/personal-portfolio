@@ -73,9 +73,12 @@ header {
 }
 
 .header-links:hover {
-  text-decoration: none;
   cursor: pointer;
 }
+.header-links:focus {
+  background-color: var(--theme-color);
+}
+
 .scroll-svg {
   opacity: 0;
   transition: opacity 1s ease;

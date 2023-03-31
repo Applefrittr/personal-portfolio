@@ -13,6 +13,7 @@ const contactLnk = document.querySelector("#contact-link")
 const gif1 = document.querySelector("#gif1")
 const gif2 = document.querySelector("#gif2")
 const gif3 = document.querySelector("#gif3")
+const gif4 = document.querySelector("#gif4")
 const cursor = document.querySelector(".cursor")
 const title = document.querySelector(".title");
 const titleUser = document.querySelector("h1")
@@ -100,8 +101,11 @@ const scrollEvents = () => {
     aboutHead.classList.remove("header-slide");
     gif2.classList.add("gif-slidein")
     gif3.classList.remove("gif-slidein")
-  } else if (window.scrollY + viewHT > projectsHT + gif3.offsetTop + 100) {
+  } else if (window.scrollY + viewHT > projectsHT + gif3.offsetTop + 100 && window.scrollY + viewHT < projectsHT + gif4.offsetTop + 100) {
     gif3.classList.add("gif-slidein")
+    gif4.classList.remove("gif-slidein")
+  } else if (window.scrollY + viewHT > projectsHT + gif4.offsetTop + 100) {
+    gif4.classList.add("gif-slidein")
   } else return;
 };
 
