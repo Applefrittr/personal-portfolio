@@ -54,7 +54,7 @@ header {
   padding: 1rem;
   position: relative;
   width: 230px;
-  height: 60px; 
+  height: 60px;
   border: 0;
 }
 
@@ -114,9 +114,9 @@ header {
 }
 
 .cursor {
-  padding: .15em;
+  padding: 0.15em;
   background-color: white;
-  font-size: .65em;
+  font-size: 0.65em;
 }
 
 .cursor-blink {
@@ -146,7 +146,7 @@ header {
   /* background-color: rgb(46, 0, 11); */
   /* box-shadow: 1px 1px 20px 1px black; */
   overflow: hidden;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .scale {
@@ -154,7 +154,7 @@ header {
 }
 
 footer {
-  padding: 3rem;
+  padding: 1rem;
   background-color: #fcee09;
   display: flex;
   align-items: center;
@@ -215,5 +215,4 @@ footer {
     width: 150px;
     font-size: 1.25rem;
   }
-  
 }
