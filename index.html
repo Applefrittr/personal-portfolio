@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
   </head>
   <body>
@@ -16,16 +18,22 @@
         <div class="title">
           <p>USER_</p>
           <div class="title-user">
-            <h1></h1><span class="cursor">.</span>
+            <h1></h1>
+            <span class="cursor">.</span>
           </div>
           <div class="title-descrpt">
             <p class="title-descrpt-p"></p>
           </div>
           <div class="login">
-            <span>Login: <b style="color:rgb(255, 0, 60);">SUCCESSFUL</b></span>
+            <span>Login: <b style="color: rgb(255, 0, 60)">SUCCESSFUL</b></span>
           </div>
           <svg width="100" height="125" class="scroll-svg">
-            <path d="M 50 10 V 120 L 40 110 L 50 120 L 60 110" stroke="white" fill="transparent" stroke-width="2"/>
+            <path
+              d="M 50 10 V 120 L 40 110 L 50 120 L 60 110"
+              stroke="white"
+              fill="transparent"
+              stroke-width="2"
+            />
             <path id="text-path" d="M 45 115 V 10" />
             <text
               fill="white"
@@ -34,14 +42,19 @@
               x="10"
               y="10"
             >
-            <textPath xlink:href="#text-path">Scroll Down</textPath>
-          </text>
-
+              <textPath xlink:href="#text-path">Scroll Down</textPath>
+            </text>
           </svg>
           <div class="header-links-container">
-            <button id="about-link" class="header-links"><span>ABOUT_</span></button>
-            <button id="projects-link" class="header-links"><span>PROJECTS_</span></button>
-            <button id="contact-link" class="header-links"><span>CONTACT_</span></button>
+            <button id="about-link" class="header-links">
+              <span>ABOUT_</span>
+            </button>
+            <button id="projects-link" class="header-links">
+              <span>PROJECTS_</span>
+            </button>
+            <button id="contact-link" class="header-links">
+              <span>CONTACT_</span>
+            </button>
           </div>
         </div>
       </div>
@@ -56,13 +69,31 @@
             <img src="assets/0944355006d47034762c.jpg" alt="user-icon" />
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-            odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
-            quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
-            mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-            Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad
-            litora torquent per conubia nostra, per inceptos himenaeos.
-            Curabitur sodales ligula in libero.
+            Applefrittr here. Welcome and thanks for stopping by! I’m a full
+            stack web-developer with a eye for detail and an inherent love for
+            creativity. Building on these two principles, I’ve been able to
+            construct a strong foundation in both front end and back end
+            development, where the end result is a fun and easy to use
+            experience for the end user.
+          </p>
+          <p>
+            My professional background is in finance, but I’ve always had a
+            passion technology. As a millennial, the transition from an analog
+            world into the digital age is a big part of my generation’s
+            identity. The curiosity to figure out “how it all works” has always
+            been present, which more recently has transformed into an
+            exploration of the vast world of coding. Complement that with
+            creative expression, I decided to pursue web-development
+            professionally. Since beginning my journey, I’ve honed my skills in
+            both client and server side development leveraging technologies
+            listed here.
+          </p>
+          <p>
+            In my portfolio, you'll find a collection of projects that showcase
+            my skills and expertise. From interactive web-based games to full
+            stack web-apps, each project demonstrates my ability to leverage
+            different technologies to deliever high quality solutions to the end
+            user.
           </p>
         </div>
         <div class="about-skills">
@@ -89,8 +120,12 @@
               <p>JEST</p>
             </div>
             <div class="grid-item">
-              <i class="devicon-firebase-plain colored"></i>
-              <p>FIREBASE</p>
+              <i class="devicon-mongodb-plain colored"></i>
+              <p>MONGODB</p>
+            </div>
+            <div class="grid-item">
+              <i class="devicon-mongoose-original"></i>
+              <p>MONGOOSE</p>
             </div>
             <div class="grid-item">
               <i class="devicon-webpack-plain colored"></i>
@@ -105,16 +140,24 @@
               <p>GIT</p>
             </div>
             <div class="grid-item">
-              <i class="devicon-sass-original colored"></i>
-              <p>SASS</p>
+              <i class="devicon-firebase-plain colored"></i>
+              <p>FIREBASE</p>
             </div>
             <div class="grid-item">
               <i class="devicon-vscode-plain colored"></i>
               <p>VS CODE</p>
             </div>
             <div class="grid-item">
-              <i class="devicon-nodejs-plain colored"></i>
+              <i class="devicon-nodejs-plain-wordmark"></i>
               <p>NODEJS</p>
+            </div>
+            <div class="grid-item">
+              <i class="devicon-express-original-wordmark"></i>
+              <p>EXPRESS</p>
+            </div>
+            <div class="grid-item">
+              <i class="devicon-socketio-original"></i>
+              <p>SOCKETIO</p>
             </div>
           </div>
         </div>
@@ -128,12 +171,68 @@
       <div class="all-projects-container">
         <div class="project-container">
           <div class="project-container-descrpt">
+            <h3>Discognito</h3>
+            <p>
+              Discognito is a Discord bot full stack application. Once the bot
+              is granted permission to join a Discord server, the bot streams
+              text channel user inputs to Discognito's client side app.
+              Discognito's backend API uses the discord.js library to connect to
+              Discord's API and streams data to the client side app using web
+              sockets. The client side app was built using React to emulate
+              Discord's familiar UI.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://discognito-app-production.up.railway.app"
+                target="_blank"
+              >
+                <div class="project-button">
+                  Live_
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="25"
+                    height="25"
+                  >
+                    <title>open-in-new</title>
+                    <path
+                      fill="white"
+                      d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <a
+                href="https://github.com/Applefrittr/discognito-app"
+                target="_blank"
+              >
+                <div class="project-button">
+                  Repo_<i class="devicon-github-original"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="project-container-gif" id="gif0">
+            <div class="gif-container">
+              <img
+                src="assets/2e49805982a269c91c4d.gif"
+                alt="gif of Tarkov Loadouts"
+                class="right-shadow"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="project-container">
+          <div class="project-container-descrpt">
             <h3>Tarkov Loadouts</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-              Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-              Praesent mauris.
+              Tarkov Loadouts is a companion app for Battle State Game’s ip
+              Escape from Tarkov. Built primarily using React and leveraging
+              tools like React Router and Framer Motion, Tarkov loadouts
+              simulates a user’s in game “hideout” to create a randomized
+              experience, from equipment loadouts, to status effects, and even
+              map choice.
             </p>
             <div class="project-links">
               <a
@@ -181,10 +280,13 @@
           <div class="project-container-descrpt">
             <h3>PokeFind</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-              Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-              Praesent mauris.
+              PokeFind is a photo tagging game created much in the spirit of the
+              classic Where’s Waldo books. The user has to tag 3 randomized
+              pokemon in the provided image as fast as possible with the fastest
+              times being displayed in the scoreboard. Built using React and
+              leveraging Firebase to store user scores as well as tagging
+              coordinates solutions – preventing the ability to cheat by
+              inspecting the page using developer tools.
             </p>
             <div class="project-links">
               <a
@@ -227,10 +329,11 @@
           <div class="project-container-descrpt">
             <h3>Turismo Dealership</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-              Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-              Praesent mauris.
+              Turismo Dealership is a basic e-commerce shopping cart mock up.
+              Built using React with along with React Router and Framer Motion
+              tools, the app offers a smooth and visually appealing user
+              experience. Assets used are based off of Sony’s Grand Turismo
+              franchise.
             </p>
             <div class="project-links">
               <a
@@ -273,10 +376,12 @@
           <div class="project-container-descrpt">
             <h3>Battleship</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-              Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-              Praesent mauris.
+              Battleship was built using pure JavaScript, HTML, and CSS. Players
+              got head to head against a computer controlled player in efforts
+              to sink all of their ships. The game board and assets are created
+              using JS concepts such as DOM manipulation and factory functions
+              while the UI and animations leverage CSS and JS to create a smooth
+              user experience.
             </p>
             <div class="project-links">
               <a
@@ -320,14 +425,16 @@
           </div>
         </div>
 
-        <a href="https://github.com/Applefrittr?tab=repositories" target="_blank" id="all-repos">
+        <a
+          href="https://github.com/Applefrittr?tab=repositories"
+          target="_blank"
+          id="all-repos"
+        >
           <div id="all-repos-contents">
             View Portfolio<i class="devicon-github-original"></i>
           </div>
         </a>
       </div>
-
-      
     </main>
     <footer>
       <h2>Contact Me Below</h2>
