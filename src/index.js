@@ -54,14 +54,6 @@ const titleAnimations = () => {
   }, 10000);
 
   setTimeout(() => {
-    // let count = 0
-    // const print = setInterval(() => {
-    //   if (count === 20) clearInterval(print)
-    //   let ele = document.createElement('p')
-    //   ele.textContent = "//"
-    //   title.appendChild(ele)
-    //   count++
-    // }, 25)
     headerLinks.style.opacity = "1";
     setTimeout(() => {
       svg.style.opacity = "1";
