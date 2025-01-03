@@ -6,9 +6,9 @@ const about = document.querySelector(".about");
 const aboutHead = document.querySelector("#about-head");
 const projects = document.querySelector(".projects");
 const projectsHead = document.querySelector("#projects-head");
-const aboutLnk = document.querySelector("#about-link");
+const aboutLnks = document.querySelectorAll("#about-link");
 const contact = document.querySelector("footer");
-const projectsLnk = document.querySelector("#projects-link");
+const projectsLnks = document.querySelectorAll("#projects-link");
 const contactLnk = document.querySelector("#contact-link");
 const gif0 = document.querySelector("#gif0");
 const gif1 = document.querySelector("#gif1");
@@ -23,6 +23,7 @@ const descrptP = document.querySelector(".title-descrpt-p");
 const login = document.querySelector(".login");
 const headerLinks = document.querySelector(".header-links-container");
 const svg = document.querySelector(".scroll-svg");
+const home = document.querySelector("#home");
 
 const titleAnimations = () => {
   setTimeout(() => {
@@ -131,18 +132,26 @@ const typeWrite = (string, target, wait) => {
 // event listeners
 document.addEventListener("scroll", scrollEvents);
 
-aboutLnk.addEventListener("click", () => {
-  window.scrollTo({ top: about.offsetTop - 24, left: 0, behavior: "smooth" });
-});
-projectsLnk.addEventListener("click", () => {
-  window.scrollTo({
-    top: projects.offsetTop - 24,
-    left: 0,
-    behavior: "smooth",
-  });
-});
+aboutLnks.forEach((button) =>
+  button.addEventListener("click", () => {
+    window.scrollTo({ top: about.offsetTop - 24, left: 0, behavior: "smooth" });
+  })
+);
+projectsLnks.forEach((button) =>
+  button.addEventListener("click", () => {
+    window.scrollTo({
+      top: projects.offsetTop - 24,
+      left: 0,
+      behavior: "smooth",
+    });
+  })
+);
 contactLnk.addEventListener("click", () => {
   window.scrollTo({ top: contact.offsetTop - 24, left: 0, behavior: "smooth" });
+});
+
+home.addEventListener("click", () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
 
 //Page open
