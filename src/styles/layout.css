@@ -251,10 +251,14 @@ footer {
   font-size: 2rem;
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 400px) {
   header {
     height: fit-content;
     display: flex;
+  }
+
+  .title {
+    font-size: 1.75rem;
   }
 
   .header-links {
