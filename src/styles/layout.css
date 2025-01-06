@@ -57,7 +57,8 @@ header {
   border: 0;
 }
 
-.header-links > span {
+.header-links > span,
+.header-links > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,13 +70,16 @@ header {
   bottom: 2px;
   background-color: var(--theme-color);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  text-decoration: none;
 }
 
 .header-links:hover {
   cursor: pointer;
 }
-.header-links:focus {
-  background-color: var(--theme-color);
+
+.header-links > span:hover,
+.header-links > a:hover {
+  background-color: var(--outlines);
 }
 
 .scroll-svg {
