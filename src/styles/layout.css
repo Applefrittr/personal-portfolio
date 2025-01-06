@@ -250,7 +250,18 @@ footer {
   font-size: 2rem;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 900px) {
+  .title {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+
+  .title-user {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .title {
     padding-left: 18px;
     font-size: 1.25rem;
@@ -264,6 +275,10 @@ footer {
     height: 40px;
     width: 150px;
     font-size: 1.25rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
   }
 
   .footer-user {
