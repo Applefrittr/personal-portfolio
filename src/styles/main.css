@@ -1,13 +1,14 @@
 @import "./layout.css";
 @import "./about.css";
 @import "./projects.css";
+@import "./hero.css";
 
 :root {
   /* --theme-color: rgb(123, 104, 238);
   --highlights: rgb( 72, 61, 139 ); */
   --theme-color: #2a2356;
-  --bg-color: rgb(46, 0, 11);
-  --lettering: rgb(255, 0, 60);
+  --bg-color: #2e000b;
+  --lettering: #ff003c;
   --outlines: #6ecbf5;
 }
 
@@ -31,7 +32,20 @@
   src: url("../assets/Tomorrow-Regular.ttf");
 }
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bg-theme {
+  background-color: var(--bg-color);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    background-color: #0000;
   }
-  
+  50% {
+    background-color: var(--lettering);
+  }
+}

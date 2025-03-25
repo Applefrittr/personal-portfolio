@@ -3,6 +3,7 @@
   width: 100%;
   background-color: black;
   border: 3px solid var(--outlines);
+  color: black;
 }
 
 .header-slide {
@@ -11,7 +12,7 @@
 }
 
 .section-heading .header {
-  color: var(--theme-color);
+  color: black;
   padding: 0.75rem 5rem;
   background-color: var(--theme-color);
   transition: all 1s;
