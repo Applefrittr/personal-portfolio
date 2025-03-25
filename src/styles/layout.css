@@ -17,71 +17,36 @@ header {
   position: relative;
 }
 
-.header-overlay {
-  background-image: url("../assets/city.gif");
-  background-position: center;
-  background-size: cover;
-  background-repeat: none;
-  flex: auto;
-  box-shadow: 1px 1px 20px 1px black;
-  position: relative;
+.section-heading {
+  z-index: 1;
+  width: 100%;
+  background-color: var(--bg-color);
+  border: 3px solid var(--lettering);
+  color: var(--lettering);
 }
 
-.scroll-svg {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
+.header-slide {
+  background-position: -99.5% 0;
+  color: white !important;
 }
 
-.title {
-  transform: translateX(50px);
-  opacity: 0;
-  padding-left: 100px;
-  padding-top: 100px;
-  font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+.section-heading .header {
+  color: black;
+  padding: 0.75rem 5rem;
+  transition: all 1s;
+  font-family: Tomorrow;
+}
+
+.section-content {
+  display: flex;
   height: 100%;
-  color: white;
-  overflow: hidden;
-}
-
-.title-user {
-  display: flex;
-  height: fit-content;
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 10rem;
-}
-
-.title-user > h1 {
-  font-family: Glitch;
-  font-size: inherit;
-}
-
-.title-descrpt {
-  display: flex;
-  align-items: center;
-}
-
-.cursor {
-  padding: 0.15em;
-  background-color: white;
-  font-size: 0.65em;
-}
-
-.cursor-blink {
-  opacity: 0;
-}
-
-.login {
-  opacity: 0;
-  transition: opacity 1s ease;
-  padding-top: 2rem;
-}
-
-.slidein {
-  transform: translateX(0px);
-  opacity: 1;
-  transition: opacity 0.5s ease-in, transform 0.25s ease-in-out;
+  padding: 3rem;
+  gap: 2rem;
+  width: 100%;
+  border: solid 3px var(--lettering);
+  background-color: black;
 }
 
 .about,
@@ -92,8 +57,6 @@ header {
   flex-direction: column;
   align-items: center;
   transition: scale 1s ease;
-  /* background-color: rgb(46, 0, 11); */
-  /* box-shadow: 1px 1px 20px 1px black; */
   overflow: hidden;
   gap: 1rem;
 }
