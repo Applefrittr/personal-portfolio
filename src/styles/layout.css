@@ -26,7 +26,6 @@ header {
 }
 
 .header-slide {
-  background-position: -99.5% 0;
   color: white !important;
 }
 
@@ -62,7 +61,7 @@ header {
 }
 
 .scale {
-  scale: 98%;
+  scale: 95%;
 }
 
 footer {

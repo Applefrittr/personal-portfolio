@@ -68,12 +68,13 @@ const scrollEvents = () => {
   let aboutHT = about.offsetTop,
     projectsHT = projects.offsetTop,
     viewHT = window.innerHeight;
-  if (window.scrollY < 300) {
+  console.log(gif0);
+  if (window.scrollY + viewHT < 300) {
     about.classList.remove("scale");
     aboutHead.classList.remove("header-slide");
   } else if (
     window.scrollY + viewHT > aboutHT &&
-    window.scrollY + viewHT < projectsHT + gif0.offsetTop + 100
+    window.scrollY + viewHT < projectsHT + gif0.offsetTop
   ) {
     aboutHead.classList.add("header-slide");
     about.classList.add("scale");
@@ -81,8 +82,8 @@ const scrollEvents = () => {
     projectsHead.classList.remove("header-slide");
     gif0.classList.remove("gif-slidein");
   } else if (
-    window.scrollY + viewHT > projectsHT + gif0.offsetTop + 100 &&
-    window.scrollY + viewHT < projectsHT + gif1.offsetTop + 100
+    window.scrollY + viewHT > projectsHT + gif0.offsetTop &&
+    window.scrollY + viewHT < projectsHT + gif1.offsetTop
   ) {
     aboutHead.classList.add("header-slide");
     about.classList.add("scale");
@@ -91,26 +92,26 @@ const scrollEvents = () => {
     gif0.classList.add("gif-slidein");
     gif1.classList.remove("gif-slidein");
   } else if (
-    window.scrollY + viewHT > projectsHT + gif1.offsetTop + 100 &&
-    window.scrollY + viewHT < projectsHT + gif2.offsetTop + 100
+    window.scrollY + viewHT > projectsHT + gif1.offsetTop &&
+    window.scrollY + viewHT < projectsHT + gif2.offsetTop
   ) {
     about.classList.remove("scale");
     aboutHead.classList.remove("header-slide");
     gif1.classList.add("gif-slidein");
     gif2.classList.remove("gif-slidein");
   } else if (
-    window.scrollY + viewHT > projectsHT + gif2.offsetTop + 100 &&
-    window.scrollY + viewHT < projectsHT + gif3.offsetTop + 100
+    window.scrollY + viewHT > projectsHT + gif2.offsetTop &&
+    window.scrollY + viewHT < projectsHT + gif3.offsetTop
   ) {
     gif2.classList.add("gif-slidein");
     gif3.classList.remove("gif-slidein");
   } else if (
-    window.scrollY + viewHT > projectsHT + gif3.offsetTop + 100 &&
-    window.scrollY + viewHT < projectsHT + gif4.offsetTop + 100
+    window.scrollY + viewHT > projectsHT + gif3.offsetTop &&
+    window.scrollY + viewHT < projectsHT + gif4.offsetTop
   ) {
     gif3.classList.add("gif-slidein");
     gif4.classList.remove("gif-slidein");
-  } else if (window.scrollY + viewHT > projectsHT + gif4.offsetTop + 100) {
+  } else if (window.scrollY + viewHT > projectsHT + gif4.offsetTop) {
     gif4.classList.add("gif-slidein");
   } else return;
 };
