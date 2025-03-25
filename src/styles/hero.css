@@ -152,22 +152,6 @@ canvas {
   text-align: right;
 }
 
-/* .header-links > span,
-.header-links > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  color: var(--lettering);
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  background-color: rgba(0, 0, 0);
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
-  text-decoration: none;
-} */
-
 .header-links:hover {
   cursor: pointer;
 }
@@ -192,4 +176,32 @@ canvas {
 
 .fade-in {
   opacity: 1;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .header-user {
+    top: 5%;
+    left: 5%;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      padding: 0.5rem 1rem;
+    }
+  }
+  .header-links-container {
+    right: 5%;
+    bottom: 5%;
+    .header-links {
+      height: 40px;
+      width: 150px;
+      font-size: 1.25rem;
+    }
+  }
 }

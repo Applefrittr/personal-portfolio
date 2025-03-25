@@ -27,6 +27,7 @@ const headerLinks = document.querySelector(".header-links-container");
 const home = document.querySelector("#home");
 
 const heroCursor = document.querySelector(".hero-cursor");
+const loginContainer = document.querySelector(".login-container");
 const loginUser = document.querySelector("#login-user");
 const loginPass = document.querySelector("#login-pass");
 const loginPassField = document.querySelector("#login-pass-field");
@@ -58,6 +59,7 @@ const titleAnimations = () => {
               }, 100);
               setTimeout(() => {
                 headerLinks.classList.add("reveal");
+                loginContainer.classList.add("hide");
                 setTimeout(() => {
                   headerLinks.classList.add("fade-in");
                 }, 100);

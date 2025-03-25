@@ -37,10 +37,10 @@ class Matrix {
     this.fontSize = 18;
     this.columns = this.width / this.fontSize;
     this.symbols = [];
-    this.#intialize();
+    this.#createSymbols();
   }
 
-  #intialize() {
+  #createSymbols() {
     for (let i = 0; i < this.columns; i++) {
       const symbol = new Symbol(i, 0, this.fontSize);
       this.symbols.push(symbol);
@@ -53,7 +53,7 @@ class Matrix {
     ctx.clearRect(0, 0, innerWidth, innerHeight);
     this.columns = this.width / this.fontSize;
     this.symbols = [];
-    this.#intialize();
+    this.#createSymbols();
   }
 }
 
@@ -82,7 +82,9 @@ export function animate(timeStamp) {
 }
 
 window.addEventListener("resize", () => {
-  canvas.width = innerWidth;
-  canvas.height = innerHeight;
-  matrix.resize(innerWidth, innerHeight);
+  if (canvas.width !== innerWidth) {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    matrix.resize(innerWidth, innerHeight);
+  }
 });
