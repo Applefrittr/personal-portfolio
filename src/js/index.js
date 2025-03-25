@@ -1,7 +1,6 @@
 import "../styles/main.css";
 import { matrix, animate } from "./canvas";
 
-// const aboutBtn = document.querySelector("#about-button");
 const body = document.querySelector("body");
 const about = document.querySelector(".about");
 const aboutHead = document.querySelector("#about-head");
@@ -16,14 +15,7 @@ const gif1 = document.querySelector("#gif1");
 const gif2 = document.querySelector("#gif2");
 const gif3 = document.querySelector("#gif3");
 const gif4 = document.querySelector("#gif4");
-//const cursor = document.querySelector(".cursor");
-//const title = document.querySelector(".title");
-//const titleUser = document.querySelector("h1");
-//const titleDescrpt = document.querySelector(".title-descrpt");
-//const descrptP = document.querySelector(".title-descrpt-p");
-//const login = document.querySelector(".login");
 const headerLinks = document.querySelector(".header-links-container");
-//const svg = document.querySelector(".scroll-svg");
 const home = document.querySelector("#home");
 
 const heroCursor = document.querySelector(".hero-cursor");
@@ -70,50 +62,13 @@ const titleAnimations = () => {
       }, 1000);
     }, 1000);
   }, 1000);
-  //   setTimeout(() => {
-  //     title.classList.add("slidein");
-  //   }, 1000);
-  //   setInterval(() => {
-  //     cursor.classList.toggle("cursor-blink");
-  //   }, 500);
-
-  //   setTimeout(() => {
-  //     typeWrite("APPLEFRITTR", titleUser, 100);
-  //   }, 3000);
-
-  //   setTimeout(() => {
-  //     titleDescrpt.appendChild(cursor);
-  //     typeWrite("Designing Web Apps with style", descrptP, 75);
-  //   }, 6000);
-
-  //   setTimeout(() => {
-  //     login.style.opacity = "1";
-  //     setTimeout(() => {
-  //       typeWrite(".....", login, 500);
-  //     }, 1000);
-  //     setTimeout(() => {
-  //       const init = document.createElement("span");
-  //       init.textContent = " INITIALIZE";
-  //       login.appendChild(init);
-  //     }, 3750);
-  //   }, 10000);
-
-  //   setTimeout(() => {
-  //     headerLinks.style.opacity = "1";
-  //     setTimeout(() => {
-  //       svg.style.opacity = "1";
-  //     }, 1000);
-  //   }, 14000);
 };
 
 const scrollEvents = () => {
-  //console.log(window.scrollY)
   let aboutHT = about.offsetTop,
     projectsHT = projects.offsetTop,
     viewHT = window.innerHeight;
-  //console.log(aboutHT, projectsHT, scrollY + viewHT);
   if (window.scrollY < 300) {
-    //title.style.paddingTop = `${100 + window.scrollY * 0.5}px`;
     about.classList.remove("scale");
     aboutHead.classList.remove("header-slide");
   } else if (
