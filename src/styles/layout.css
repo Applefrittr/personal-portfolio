@@ -67,14 +67,14 @@ header {
 
 footer {
   padding: 2rem;
-  background-color: #fcee09;
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  color: black;
-  border-top: 2px solid var(--theme-color);
+  color: white;
+  border-top: 2px solid var(--lettering);
 }
 
 .footer-container {
@@ -101,12 +101,12 @@ footer {
 
 .footer-links-list > p {
   padding: 0.5rem 0;
-  color: darkslategrey;
+  color: #c2c2c2;
 }
 
 .footer-links-list > li > a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .footer-links-list > li > a:hover {
@@ -134,7 +134,7 @@ footer {
 .link-container {
   width: 40px;
   height: 40px;
-  background-color: #fcee09;
+  background-color: var(--bg-color);
   border-radius: 50%;
   text-align: center;
   display: flex;
