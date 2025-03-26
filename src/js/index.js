@@ -68,7 +68,6 @@ const scrollEvents = () => {
   let aboutHT = about.offsetTop,
     projectsHT = projects.offsetTop,
     viewHT = window.innerHeight;
-  console.log(gif0);
   if (window.scrollY + viewHT < 300) {
     about.classList.remove("scale");
     aboutHead.classList.remove("header-slide");

@@ -107,14 +107,6 @@
   background-color: black;
 }
 
-/* .right-shadow {
-  box-shadow: 20px 20px 0 0 var(--lettering);
-}
-
-.left-shadow {
-  box-shadow: -20px 20px 0 0 var(--lettering);
-} */
-
 #all-repos {
   text-decoration: none;
   color: white;
