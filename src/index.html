@@ -14,54 +14,43 @@
   </head>
   <body>
     <header>
-      <div class="header-overlay">
-        <div class="title">
-          <p>USER_</p>
-          <div class="title-user">
-            <h1></h1>
-            <span class="cursor">.</span>
-          </div>
-          <div class="title-descrpt">
-            <p class="title-descrpt-p"></p>
-          </div>
-          <div class="login">
-            <span>Login: <b style="color: rgb(255, 0, 60)">SUCCESSFUL</b></span>
-          </div>
-          <svg width="100" height="125" class="scroll-svg">
-            <path
-              d="M 50 10 V 120 L 40 110 L 50 120 L 60 110"
-              stroke="white"
-              fill="transparent"
-              stroke-width="2"
-            />
-            <path id="text-path" d="M 45 115 V 10" />
-            <text
-              fill="white"
-              font-size="16"
-              font-family="Tomorrow"
-              x="10"
-              y="10"
-            >
-              <textPath xlink:href="#text-path">Scroll Down</textPath>
-            </text>
-          </svg>
-          <div class="header-links-container">
-            <button id="about-link" class="header-links">
-              <span>ABOUT_</span>
-            </button>
-            <button id="projects-link" class="header-links">
-              <span>PROJECTS_</span>
-            </button>
-            <button id="contact-link" class="header-links">
-              <span>CONTACT_</span>
-            </button>
-            <button id="contact-link" class="header-links">
-              <a href="https://drive.google.com/file/d/1Px8X1X0ivDgjOzrM0GXUYN-iA_sGuBmP/view?usp=sharing" target="_blank">RESUME_</a>
-            </button>
-          </div>
+
+    <canvas></canvas>
+
+    <div class="header-links-container">
+      <button id="about-link" class="header-links">
+        <span>About+</span>
+      </button>
+      <button id="projects-link" class="header-links">
+        <span>Projects+</span>
+      </button>
+      <button id="contact-link" class="header-links">
+        <span>Contact+</span>
+      </button>
+      <button id="contact-link" class="header-links">
+        <a href="https://drive.google.com/file/d/1Px8X1X0ivDgjOzrM0GXUYN-iA_sGuBmP/view?usp=sharing" target="_blank">Resume+</a>
+      </button>
+    </div>
+    
+    <div class="login-container">
+      <h2>LOGIN_</h2>
+        <div>
+          <p>User: <span id="login-user"></span><span class="hero-cursor" /></p>
+          <p id="login-pass-field">Password: <span id="login-pass"></span></p>
+        </div>
+        <div id="login-execute">EXECUTE_
+          <section id="login-execute-overlay"></section>
         </div>
       </div>
+
+      <div class="header-user">
+        <p>User_</p>
+        <h1>APPLEFRITTR</h1>
+        <p>Software design and engineering</p>
+      </div>
     </header>
+
+
     <main class="about">
       <div class="section-heading">
         <h2 class="header" id="about-head">ABOUT_</h2>
@@ -462,9 +451,9 @@
         </ul>
         <ul class="footer-links-list">
           <p>Project Links</p>
+          <li><a href="https://github.com/Applefrittr/bust-a-move" target="_blank">Bust A Move</a></li>
           <li><a href="https://discognito-app-production.up.railway.app" target="_blank">Discognito</a></li>
           <li><a href="https://github.com/Applefrittr/tarkov-loadouts" target="_blank">Tarkov Loadouts</a></li>
-          <li><a href="https://github.com/Applefrittr/wheres-waldo" target="_blank">Pokefind</a></li>
           <li><a href="https://github.com/Applefrittr/messenger-app" target="_blank">Mylo Messenger</a></li>
           <li><a href="https://applefrittr.github.io/space-invaders/" target="_blank">Space Invaders</a></li>
         </ul>
@@ -474,17 +463,17 @@
         <ul class="contact-links-container">
           <li class="link-container">
             <a href="mailto: jacob.lee.jordan@gmail.com"
-              ><img src="./assets/email.png" alt="email"
+              ><img src="./assets/email-white.png" alt="email"
             /></a>
           </li>
           <li class="link-container">
             <a href="https://github.com/Applefrittr" target="_blank"
-              ><i class="devicon-github-original colored"></i
+              ><i class="devicon-github-original" style="color: white;"></i
             ></a>
           </li>
           <li class="link-container">
             <a href="https://drive.google.com/file/d/1Px8X1X0ivDgjOzrM0GXUYN-iA_sGuBmP/view?usp=sharing" target="_blank"
-              ><img src="./assets/resume.png" alt="resume"/></i
+              ><img src="./assets/resume-white.png" alt="resume"/></i
             ></a>
           </li>
         </ul>

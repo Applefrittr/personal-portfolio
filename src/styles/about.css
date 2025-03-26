@@ -1,35 +1,3 @@
-.section-heading {
-  z-index: 1;
-  width: 100%;
-  background-color: black;
-  border: 3px solid var(--outlines);
-}
-
-.header-slide {
-  background-position: -99.5% 0;
-  color: white !important;
-}
-
-.section-heading .header {
-  color: var(--theme-color);
-  padding: 0.75rem 5rem;
-  background-color: var(--theme-color);
-  transition: all 1s;
-  font-family: Tomorrow;
-}
-
-.section-content {
-  display: flex;
-  height: 100%;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 3rem;
-  gap: 2rem;
-  width: 100%;
-  border: solid 3px var(--lettering);
-  background-color: var(--bg-color);
-}
-
 .about-profile,
 .about-skills {
   flex: 1;
@@ -48,6 +16,10 @@
 .profile-icon-container {
   width: 250px;
   height: 250px;
+}
+
+.profile-icon-container::before {
+  content: "+";
 }
 
 .profile-icon-container img {
